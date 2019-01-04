@@ -5,7 +5,8 @@ declared-services:
     plan: Lite 
 applications:
 - name: sample-nodejs-cloudant
-  random-route: true
+  host: sample-nodejs-cloudant
+  domain: wakemanco.com
   memory: 256M
   services:
   - sample-nodejs-cloudant-cloudantNoSQLDB
