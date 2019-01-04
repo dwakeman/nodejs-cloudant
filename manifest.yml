@@ -1,12 +1,12 @@
----
-declared-services: 
-  sample-nodejs-cloudant-cloudantNoSQLDB:
-    label: cloudantNoSQLDB 
-    plan: Lite 
 applications:
-- name: sample-nodejs-cloudant
+- buildpack: sdk-for-nodejs
+  name: sample-nodejs-cloudant
   host: sample-nodejs-cloudant
-  domain: wakemanco.com
+  domain: dw-dev-cfee-cluster.us-south.containers.appdomain.cloud
+  instances: 1
   memory: 256M
+  disk_quota: 1024M
+  timeout: 180
   services:
   - sample-nodejs-cloudant-cloudantNoSQLDB
+  
